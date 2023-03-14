@@ -75,12 +75,6 @@ public class ngserver {
                                 }
                         });
                         httpsServer.createContext("/nglogin", new nglogin());
-                        httpsServer.createContext("/ngrank", new ngrank());
-                        httpsServer.createContext("/ngactivate", new ngactivate());
-                        httpsServer.createContext("/ngquery", new ngquery());
-            httpsServer.createContext("/ngrecyclehistory", new ngrecyclghistory());
-                httpsServer.createContext("/ngpassword", new ngpassword());
-                        httpsServer.createContext("/ngspendhistory", new ngspendhistory());
                         httpsServer.setExecutor(Executors.newCachedThreadPool());
                     httpsServer.start();
 

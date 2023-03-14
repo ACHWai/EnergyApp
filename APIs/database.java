@@ -11,14 +11,16 @@ import java.sql.DriverManager;
 
 public class database {
 	//a user called postgres opens a database called energyapp
-        public String url = "jdbc:postgresql://127.0.0.1/energyapp?user=postgres";
+        public String url = "jdbc:mysql://127.0.0.1/energyapp";
+	public String user = "student";
+    	public String password = "isfshuyuan";
         public static Connection conn;
 
         ngdatabase() {
 
                 System.out.println("database init\n");
                 try {
-                    conn = DriverManager.getConnection(url);
+                    conn = DriverManager.getConnection(url, user, password);
                     System.out.println("connect done\n");
                 } catch (Exception e) {
                     e.printStackTrace();
